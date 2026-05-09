@@ -1,4 +1,4 @@
-// PERFORMANCE V1 â Scenes 1-3: Intro, Patient, Profile
+// PERFORMANCE V1 — Scenes 1-3: Intro, Patient, Profile
 
 // SCENE 1: INTRO 0-4.5s
 function PerfSceneIntro() {
@@ -47,12 +47,12 @@ function PerfSceneIntro() {
             <div style={{ position: 'absolute', left: 0, right: 0, top: '76%', textAlign: 'center',
               color: 'rgba(255,255,255,0.78)', opacity: subOp,
               fontWeight: 400, fontSize: 24, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-              AnÃ¡lisis clÃ­nicoâfisiopatolÃ³gico deportivo
+              Análisis clínico–fisiopatológico deportivo
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, bottom: 70, textAlign: 'center',
               opacity: eyebrowOp, color: 'rgba(255,255,255,0.55)', fontSize: 16, letterSpacing: '0.2em' }}>
-              Â· INFORME Â· SPR01140AA Â· 28 Â· 04 Â· 2026 Â·
+              · INFORME · SPR01140AA · 28 · 04 · 2026 ·
             </div>
           </div>
         );
@@ -65,10 +65,10 @@ function PerfSceneIntro() {
 function PerfScenePatient() {
   const fields = [
     { l: 'PACIENTE', v: 'Juan Francisco', s: 'Lopez Cazon', d: 0.5 },
-    { l: 'EDAD Â· GÃNERO', v: '39 aÃ±os Â· Hombre', d: 0.75 },
-    { l: 'CÃDIGO Â· MUESTRA', v: 'SPR01140AA', s: 'Hisopo bucal Â· NGS', d: 1.0 },
-    { l: 'MÃDICO RESPONSABLE', v: 'Dr. Eulogio M. Vera Vivas', s: 'Director MÃ©dico â Gen Be Health', d: 1.25 },
-    { l: 'FECHA INFORME', v: '28 Â· 04 Â· 2026', d: 1.5 },
+    { l: 'EDAD · GÉNERO', v: '39 años · Hombre', d: 0.75 },
+    { l: 'CÓDIGO · MUESTRA', v: 'SPR01140AA', s: 'Hisopo bucal · NGS', d: 1.0 },
+    { l: 'MÉDICO RESPONSABLE', v: 'Dr. Eulogio M. Vera Vivas', s: 'Director Médico — Gen Be Health', d: 1.25 },
+    { l: 'FECHA INFORME', v: '28 · 04 · 2026', d: 1.5 },
   ];
 
   return (
@@ -84,7 +84,7 @@ function PerfScenePatient() {
             <HelixBg opacity={0.04}/>
             <div style={{ position: 'absolute', left: 120, top: 110, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              IdentificaciÃ³n Â· 01
+              Identificación · 01
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 160, opacity: headerOp, transform: `translateY(${headerTy}px)`,
@@ -96,8 +96,8 @@ function PerfScenePatient() {
             <div style={{ position: 'absolute', left: 120, top: 410, width: 720,
               opacity: clamp((lt-0.4)/0.6, 0, 1),
               fontSize: 26, color: INK_500, lineHeight: 1.5 }}>
-              Hemos analizado tus genes deportivos para definir cÃ³mo
-              entrenar, cÃ³mo recuperar y dÃ³nde estÃ¡ tu <strong style={{color: BLUE_900}}>verdadero potencial fÃ­sico</strong>.
+              Hemos analizado tus genes deportivos para definir cómo
+              entrenar, cómo recuperar y dónde está tu <strong style={{color: BLUE_900}}>verdadero potencial físico</strong>.
             </div>
 
             <div style={{ position: 'absolute', right: 120, top: 240, width: 600, display: 'flex', flexDirection: 'column', gap: 26 }}>
@@ -120,7 +120,7 @@ function PerfScenePatient() {
   );
 }
 
-// SCENE 3: PROFILE â POTENCIA vs RESISTENCIA 9.5-18s
+// SCENE 3: PROFILE — POTENCIA vs RESISTENCIA 9.5-18s
 // Two big radial gauges + verdict "PERFIL MIXTO"
 function PerfSceneProfile() {
   return (
@@ -140,7 +140,7 @@ function PerfSceneProfile() {
 
             <div style={{ position: 'absolute', left: 120, top: 90, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              Tu perfil deportivo Â· 02
+              Tu perfil deportivo · 02
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 135, opacity: headerOp, transform: `translateY(${headerTy}px)`,
@@ -149,10 +149,10 @@ function PerfSceneProfile() {
             </div>
 
             <div style={{ position: 'absolute', left: 240, top: 360 }}>
-              <RadialGauge value={55.8 * gaugeProg} label="POTENCIA" sub="AnaerÃ³bico" color={'#c8364a'}/>
+              <RadialGauge value={55.8 * gaugeProg} label="POTENCIA" sub="Anaeróbico" color={'#c8364a'}/>
             </div>
             <div style={{ position: 'absolute', right: 240, top: 360 }}>
-              <RadialGauge value={55.0 * gaugeProg} label="RESISTENCIA" sub="AerÃ³bico" color={'#3a5e89'}/>
+              <RadialGauge value={55.0 * gaugeProg} label="RESISTENCIA" sub="Aeróbico" color={'#3a5e89'}/>
             </div>
 
             {/* Center verdict */}
@@ -162,14 +162,14 @@ function PerfSceneProfile() {
               <div style={{ marginTop: 12, padding: '20px 36px', background: GRAD_BRAND, color: WHITE,
                 borderRadius: 999, fontFamily: 'Helvetica Neue, Inter', fontWeight: 900, fontSize: 38, letterSpacing: '-0.01em',
                 boxShadow: '0 24px 60px rgba(138,45,146,0.38)', whiteSpace: 'nowrap' }}>
-                PERFIL HÃBRIDO
+                PERFIL HÍBRIDO
               </div>
             </div>
 
             <div style={{ position: 'absolute', left: 120, right: 120, bottom: 100, textAlign: 'center',
               opacity: clamp((lt-3.6)/0.6, 0, 1), fontSize: 26, color: INK_500, lineHeight: 1.5, fontStyle: 'italic' }}>
-              Â«Ni puramente fuerza, ni puramente resistencia.<br/>
-              <strong style={{color: BLUE_900, fontStyle: 'normal'}}>Eres adaptable</strong> â pero sÃ³lo con un plan estructurado.Â»
+              «Ni puramente fuerza, ni puramente resistencia.<br/>
+              <strong style={{color: BLUE_900, fontStyle: 'normal'}}>Eres adaptable</strong> — pero sólo con un plan estructurado.»
             </div>
           </div>
         );
