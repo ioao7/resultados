@@ -12,10 +12,10 @@
 // to only render during that window -- children receive a `localTime` and
 // `progress` via the useSprite() hook.
 //
-// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─────────────────────────────────────────────────────────────────────────────
 
-// ââ Easing functions (hand-rolled, Popmotion-style) âââââââââââââââââââââââââ
-// All easings take t â [0,1] and return eased t â [0,1] (may overshoot for back/elastic).
+// ── Easing functions (hand-rolled, Popmotion-style) ─────────────────────────
+// All easings take t ∈ [0,1] and return eased t ∈ [0,1] (may overshoot for back/elastic).
 const Easing = {
   linear: (t) => t,
 
@@ -74,7 +74,7 @@ const Easing = {
   },
 };
 
-// ââ Core interpolation helpers ââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Core interpolation helpers ──────────────────────────────────────────────
 
 // Clamp a value to [min, max]
 const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
@@ -99,7 +99,7 @@ function interpolate(input, output, ease = Easing.linear) {
   };
 }
 
-// animate({from, to, start, end, ease})(t) â simpler single-segment tween.
+// animate({from, to, start, end, ease})(t) — simpler single-segment tween.
 // Returns `from` before `start`, `to` after `end`.
 function animate({ from = 0, to = 1, start = 0, end = 1, ease = Easing.easeInOutCubic }) {
   return (t) => {
@@ -110,14 +110,14 @@ function animate({ from = 0, to = 1, start = 0, end = 1, ease = Easing.easeInOut
   };
 }
 
-// ââ Timeline context ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Timeline context ────────────────────────────────────────────────────────
 
 const TimelineContext = React.createContext({ time: 0, duration: 10, playing: false });
 
 const useTime = () => React.useContext(TimelineContext).time;
 const useTimeline = () => React.useContext(TimelineContext);
 
-// ââ Sprite ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Sprite ──────────────────────────────────────────────────────────────────
 // Renders children only when the playhead is inside [start, end]. Provides
 // a sub-context with `localTime` (seconds since start) and `progress` (0..1).
 //
@@ -125,7 +125,7 @@ const useTimeline = () => React.useContext(TimelineContext);
 //     {({ localTime, progress }) => <Thing x={progress * 100} />}
 //   </Sprite>
 //
-// Or as a plain wrapper â children can call useSprite() themselves.
+// Or as a plain wrapper — children can call useSprite() themselves.
 
 const SpriteContext = React.createContext({ localTime: 0, progress: 0, duration: 0 });
 const useSprite = () => React.useContext(SpriteContext);
@@ -150,7 +150,7 @@ function Sprite({ start = 0, end = Infinity, children, keepMounted = false }) {
   );
 }
 
-// ââ Sample sprite components ââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Sample sprite components ────────────────────────────────────────────────
 
 // TextSprite: fades/slides text in on entry, holds, then fades out on exit.
 // Props: text, x, y, size, color, font, entryDur, exitDur, align
@@ -274,7 +274,7 @@ function ImageSprite({
 }
 
 // RectSprite: simple rectangle that animates position/size/color via props.
-// Useful demo primitive â takes a `render` fn for per-frame customization.
+// Useful demo primitive — takes a `render` fn for per-frame customization.
 function RectSprite({
   x = 0, y = 0,
   width = 100, height = 100,
@@ -400,7 +400,7 @@ function Stage({
     };
   }, [playing, duration, loop]);
 
-  // Keyboard: space = play/pause, â â = seek
+  // Keyboard: space = play/pause, ← → = seek
   React.useEffect(() => {
     const onKey = (e) => {
       if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
@@ -437,7 +437,7 @@ function Stage({
         fontFamily: 'Inter, system-ui, sans-serif',
       }}
     >
-      {/* Canvas area â vertically centered in remaining space */}
+      {/* Canvas area — vertically centered in remaining space */}
       <div style={{
         flex: 1,
         width: '100%',
@@ -464,7 +464,7 @@ function Stage({
         </div>
       </div>
 
-      {/* Playback bar â stacked below canvas, never overlapping */}
+      {/* Playback bar — stacked below canvas, never overlapping */}
       <PlaybackBar
         time={displayTime}
         actualTime={time}
@@ -479,7 +479,7 @@ function Stage({
   );
 }
 
-// ââ Playback bar ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Playback bar ────────────────────────────────────────────────────────────
 // Play/pause, return-to-begin, scrub track, time display.
 // Uses fixed-width time fields so layout doesn't thrash.
 
