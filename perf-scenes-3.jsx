@@ -1,22 +1,22 @@
-// PERFORMANCE â Scenes 6-8: Strengths/Limits, Plan, Closing
+// PERFORMANCE — Scenes 6-8: Strengths/Limits, Plan, Closing
 
 // SCENE 6: FORTALEZAS vs LIMITACIONES 32-40s
 function PerfSceneStrengthsLimits() {
   const strengths = [
-    { t: 'Fibras musculares rÃ¡pidas', g: 'ACTN3 Â· CC' },
-    { t: 'Soporte mitocondrial', g: 'LRPPRC Â· AA' },
-    { t: 'Eficiencia cardiovascular', g: 'ACE Â· AA' },
-    { t: 'HidrataciÃ³n celular', g: 'AQP1 Â· CC' },
-    { t: 'Tejido conectivo resistente', g: 'COL5A1 Â· TT' },
-    { t: 'Tolerancia inflamatoria', g: 'IL1B Â· TNF-Î±' },
+    { t: 'Fibras musculares rápidas', g: 'ACTN3 · CC' },
+    { t: 'Soporte mitocondrial', g: 'LRPPRC · AA' },
+    { t: 'Eficiencia cardiovascular', g: 'ACE · AA' },
+    { t: 'Hidratación celular', g: 'AQP1 · CC' },
+    { t: 'Tejido conectivo resistente', g: 'COL5A1 · TT' },
+    { t: 'Tolerancia inflamatoria', g: 'IL1B · TNF-α' },
   ];
   const limits = [
-    { t: 'Mejora limitada de VOâ mÃ¡x', g: 'PPARD Â· ZIC4' },
-    { t: 'EstrÃ©s oxidativo elevado', g: 'GSTP1 Â· AA' },
-    { t: 'Metabolismo lipÃ­dico bajo', g: 'PPARG Â· CC' },
-    { t: 'PercepciÃ³n amplificada del esfuerzo', g: 'OPRM1 Â· AG' },
-    { t: 'HDL no responde a ejercicio', g: 'LIPC Â· CC' },
-    { t: 'Hierro sin ventaja', g: 'HFE Â· GG' },
+    { t: 'Mejora limitada de VO₂ máx', g: 'PPARD · ZIC4' },
+    { t: 'Estrés oxidativo elevado', g: 'GSTP1 · AA' },
+    { t: 'Metabolismo lipídico bajo', g: 'PPARG · CC' },
+    { t: 'Percepción amplificada del esfuerzo', g: 'OPRM1 · AG' },
+    { t: 'HDL no responde a ejercicio', g: 'LIPC · CC' },
+    { t: 'Hierro sin ventaja', g: 'HFE · GG' },
   ];
 
   return (
@@ -37,7 +37,7 @@ function PerfSceneStrengthsLimits() {
               {items.map((it, i) => {
                 const start = baseStart + i*0.14;
                 const op = clamp((lt-start)/0.4, 0, 1);
-                const tx = (1-Easing.easeOutCubic(op))*30 * (sign==='â' ? 1 : -1);
+                const tx = (1-Easing.easeOutCubic(op))*30 * (sign==='✕' ? 1 : -1);
                 return (
                   <div key={i} style={{ opacity: op, transform: `translateX(${tx}px)`,
                     background: WHITE, border: `1px solid ${INK_200}`, borderLeft: `4px solid ${color}`,
@@ -55,19 +55,19 @@ function PerfSceneStrengthsLimits() {
           <div style={{ position: 'absolute', inset: 0, background: BLUE_50, opacity: exit }}>
             <div style={{ position: 'absolute', left: 120, top: 90, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              Tu mapa genÃ©tico deportivo Â· 05
+              Tu mapa genético deportivo · 05
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 135, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontFamily: 'Helvetica Neue, Inter', fontWeight: 900, fontSize: 70, color: BLUE_900, letterSpacing: '-0.025em', lineHeight: 1 }}>
-              Lo que estÃ¡ <span style={{color: '#1a8f6b'}}>a tu favor.</span><br/>
+              Lo que está <span style={{color: '#1a8f6b'}}>a tu favor.</span><br/>
               Y lo que <span style={{color: '#c8364a'}}>tienes que vigilar.</span>
             </div>
 
             <div style={{ position: 'absolute', left: 120, right: 120, top: 360,
               display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
-              {renderCol(strengths, 0.5, '#1a8f6b', 'â', 'FORTALEZAS', 'Tu ventaja')}
-              {renderCol(limits, 0.5, '#c8364a', 'â', 'LIMITACIONES', 'A intervenir')}
+              {renderCol(strengths, 0.5, '#1a8f6b', '✓', 'FORTALEZAS', 'Tu ventaja')}
+              {renderCol(limits, 0.5, '#c8364a', '✕', 'LIMITACIONES', 'A intervenir')}
             </div>
           </div>
         );
@@ -76,16 +76,16 @@ function PerfSceneStrengthsLimits() {
   );
 }
 
-// SCENE 7: PLAN â 4 PILARES 40-48s
+// SCENE 7: PLAN — 4 PILARES 40-48s
 function PerfScenePlan() {
   const pillars = [
-    { n: '01', t: 'Fuerza\nestructurada', sub: 'HIIT Â· sprint Â· pesas',
+    { n: '01', t: 'Fuerza\nestructurada', sub: 'HIIT · sprint · pesas',
       copy: 'Tu ventaja: ACTN3 favorable. Aprovecha las fibras tipo II.', tone: 'main' },
-    { n: '02', t: 'AerÃ³bico\nzonas 2 y 3', sub: 'Constancia &gt; intensidad',
-      copy: 'VOâ mÃ¡x mejora lento. Sesiones largas, sin frustrarse.', tone: 'second' },
-    { n: '03', t: 'RecuperaciÃ³n\nactiva', sub: 'Antioxidantes Â· descanso',
-      copy: 'GSTP1 te hace vulnerable al estrÃ©s oxidativo. Periodiza.', tone: 'second' },
-    { n: '04', t: 'EducaciÃ³n\ny adherencia', sub: 'Combatir la percepciÃ³n',
+    { n: '02', t: 'Aeróbico\nzonas 2 y 3', sub: 'Constancia &gt; intensidad',
+      copy: 'VO₂ máx mejora lento. Sesiones largas, sin frustrarse.', tone: 'second' },
+    { n: '03', t: 'Recuperación\nactiva', sub: 'Antioxidantes · descanso',
+      copy: 'GSTP1 te hace vulnerable al estrés oxidativo. Periodiza.', tone: 'second' },
+    { n: '04', t: 'Educación\ny adherencia', sub: 'Combatir la percepción',
       copy: 'OPRM1 amplifica el esfuerzo. Plan claro = no abandono.', tone: 'second' },
   ];
 
@@ -103,7 +103,7 @@ function PerfScenePlan() {
 
             <div style={{ position: 'absolute', left: 120, top: 90, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              Tu plan Â· 06
+              Tu plan · 06
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 135, opacity: headerOp, transform: `translateY(${headerTy}px)`,
@@ -169,25 +169,25 @@ function PerfSceneClosing() {
             <div style={{ position: 'absolute', left: 0, right: 0, top: 220, textAlign: 'center',
               opacity: op1, transform: `translateY(${ty1}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: '#d8a4dd' }}>
-              ConclusiÃ³n
+              Conclusión
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, top: 290, textAlign: 'center',
               opacity: op1, transform: `translateY(${ty1}px)`, padding: '0 200px',
               fontFamily: 'Helvetica Neue, Inter', fontWeight: 700, fontSize: 56,
               color: WHITE, letterSpacing: '-0.02em', lineHeight: 1.15, fontStyle: 'italic' }}>
-              Â«Tu cuerpo no se entrena<br/>
+              «Tu cuerpo no se entrena<br/>
               con el plan de otro.<br/>
               Se entrena con <span style={{
                 background: 'linear-gradient(90deg, #ffffff 0%, #d8a4dd 100%)',
                 WebkitBackgroundClip: 'text', backgroundClip:'text', color:'transparent', fontStyle: 'normal',
-              }}>el tuyo</span>.Â»
+              }}>el tuyo</span>.»
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, top: 700, textAlign: 'center',
               opacity: op2, color: 'rgba(255,255,255,0.7)', fontSize: 22, lineHeight: 1.5, padding: '0 320px' }}>
-              Constancia, periodizaciÃ³n y recuperaciÃ³n activa<br/>
-              determinarÃ¡n tu rendimiento a 6, 12 y 24 meses.
+              Constancia, periodización y recuperación activa<br/>
+              determinarán tu rendimiento a 6, 12 y 24 meses.
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, bottom: 130, textAlign: 'center',
@@ -197,7 +197,7 @@ function PerfSceneClosing() {
                 Elaborado por <strong style={{color: WHITE}}>Dr. Eulogio Marcelo Vera Vivas</strong>
               </div>
               <div style={{ marginTop: 4, fontSize: 14, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-                Director MÃ©dico â Gen Be Health
+                Director Médico — Gen Be Health
               </div>
             </div>
           </div>
