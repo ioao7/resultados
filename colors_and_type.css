@@ -1,5 +1,5 @@
 /* ============================================================
-   GEN BE HEALTH â Design Tokens
+   GEN BE HEALTH — Design Tokens
    Source: Manual Manejo de Marca GENBEHEALTH (official PDF)
    + genbehealth.com observations
    ============================================================ */
@@ -12,8 +12,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 
 :root {
-  /* ============= COLORS â PRIMARIES ============= */
-  /* Azul Ciencia â flagship corporate dark blue */
+  /* ============= COLORS — PRIMARIES ============= */
+  /* Azul Ciencia — flagship corporate dark blue */
   --gbh-blue-900: #142a47;       /* Primary brand blue (Azul Ciencia) */
   --gbh-blue-800: #1c3a5f;       /* Hover / pressed shade            */
   --gbh-blue-700: #284b73;
@@ -23,7 +23,7 @@
   --gbh-blue-100: #e3e8f0;
   --gbh-blue-50:  #f1f4f9;
 
-  /* Morado Longevidad â flagship corporate purple */
+  /* Morado Longevidad — flagship corporate purple */
   --gbh-purple-900: #5a1d60;
   --gbh-purple-800: #6f2477;
   --gbh-purple-700: #8a2d92;     /* Primary brand purple (Morado Longevidad) */
@@ -45,8 +45,8 @@
   --gbh-ink-50:   #f6f7fa;
   --gbh-white:    #ffffff;
 
-  /* ============= COLORS â SECONDARIES ============= */
-  /* Per Manual: "Solo aplican para combinaciÃ³n en imÃ¡genes" â image accents only */
+  /* ============= COLORS — SECONDARIES ============= */
+  /* Per Manual: "Solo aplican para combinación en imágenes" — image accents only */
   --gbh-turquoise: #00C6B4;
   --gbh-turquoise-soft: #66decf;
   --gbh-magenta:   #E10ECD;
@@ -58,7 +58,7 @@
   --color-bg-inverse:   var(--gbh-blue-900);
   --color-bg-accent:    var(--gbh-purple-50);
 
-  --color-fg:           var(--gbh-blue-900);   /* Default text â Azul Ciencia */
+  --color-fg:           var(--gbh-blue-900);   /* Default text — Azul Ciencia */
   --color-fg-muted:     var(--gbh-ink-500);
   --color-fg-subtle:    var(--gbh-ink-300);
   --color-fg-inverse:   var(--gbh-white);
@@ -85,14 +85,14 @@
   --grad-image-accent: linear-gradient(135deg, #00C6B4 0%, #E10ECD 100%); /* Image-only accent per Manual */
 
   /* ============= TYPOGRAPHY ============= */
-  /* Brand font: Helvetica family. Inter is the substitute fallback â
+  /* Brand font: Helvetica family. Inter is the substitute fallback —
      metrics are very close to Helvetica Neue so layout is preserved. */
   --font-sans: "Helvetica Neue", Helvetica, "Inter", Arial, system-ui, -apple-system, sans-serif;
   --font-display: "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Type scale â based on the website's bold display rhythm.
-     Headlines lean heavy (700â900); body stays at 400/500. */
+  /* Type scale — based on the website's bold display rhythm.
+     Headlines lean heavy (700–900); body stays at 400/500. */
   --fs-display-2xl: clamp(3rem, 6vw, 5.5rem);    /* Hero */
   --fs-display-xl:  clamp(2.5rem, 4.5vw, 4rem);  /* Section hero */
   --fs-display-lg:  clamp(2rem, 3.5vw, 3rem);    /* Page title */
@@ -100,7 +100,7 @@
   --fs-h2:    1.75rem;     /* 28px */
   --fs-h3:    1.375rem;    /* 22px */
   --fs-h4:    1.125rem;    /* 18px */
-  --fs-eyebrow: 0.8125rem; /* 13px â uppercase eyebrow */
+  --fs-eyebrow: 0.8125rem; /* 13px — uppercase eyebrow */
   --fs-body-lg: 1.125rem;  /* 18px */
   --fs-body:    1rem;      /* 16px */
   --fs-body-sm: 0.875rem;  /* 14px */
@@ -120,7 +120,7 @@
   --ls-tight: -0.02em;
   --ls-display: -0.025em;
   --ls-normal: 0em;
-  --ls-eyebrow: 0.14em;   /* Eyebrow / category labels â wide tracking */
+  --ls-eyebrow: 0.14em;   /* Eyebrow / category labels — wide tracking */
 
   /* ============= SPACING ============= */
   --space-0:  0;
