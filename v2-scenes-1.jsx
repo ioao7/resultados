@@ -1,4 +1,4 @@
-// V2 Clinical scenes â Intro + Patient + Core findings
+// V2 Clinical scenes — Intro + Patient + Core findings
 
 const BLUE_900='#142a47', BLUE_800='#1c3a5f', BLUE_50='#f1f4f9', PURPLE_700='#8a2d92',
       PURPLE_50='#faf2fb', INK_500='#5a6478', INK_300='#a0a8b8', INK_200='#d2d7e0',
@@ -54,21 +54,21 @@ function SceneIntro() {
             <div style={{ position: 'absolute', left: 0, right: 0, top: '46%', textAlign: 'center', color: WHITE,
               transform: `translateY(${ty}px)`, opacity: titleOp,
               fontFamily: 'Helvetica Neue, Inter', fontWeight: 900, fontSize: 92, letterSpacing: '-0.025em', lineHeight: 1.05 }}>
-              AnÃ¡lisis<br/>
+              Análisis<br/>
               <span style={{ background: 'linear-gradient(90deg, #ffffff 0%, #d8a4dd 100%)', WebkitBackgroundClip: 'text', backgroundClip:'text', color:'transparent' }}>
-                clÃ­nicoâfisiopatolÃ³gico
+                clínico–fisiopatológico
               </span>
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, top: '74%', textAlign: 'center',
               color: 'rgba(255,255,255,0.78)', transform: `translateY(${sty}px)`, opacity: subOp,
               fontFamily: 'Helvetica Neue, Inter', fontWeight: 400, fontSize: 26, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
-              GenÃ©tica traducida en decisiones clÃ­nicas
+              Genética traducida en decisiones clínicas
             </div>
 
             <div style={{ position: 'absolute', left: 0, right: 0, bottom: 70, textAlign: 'center',
               opacity: eyebrowOp, color: 'rgba(255,255,255,0.55)', fontSize: 16, letterSpacing: '0.2em' }}>
-              Â· INFORME GEN BE BALANCE Â· NUT24648AA Â·
+              · INFORME GEN BE BALANCE · NUT24648AA ·
             </div>
           </div>
         );
@@ -81,10 +81,10 @@ function SceneIntro() {
 function ScenePatient() {
   const fields = [
     { l: 'PACIENTE', v: 'Juan Francisco', s: 'Lopez Cazon', d: 0.5 },
-    { l: 'EDAD Â· GÃNERO', v: '39 aÃ±os Â· Hombre', d: 0.75 },
-    { l: 'CÃDIGO Â· MUESTRA', v: 'NUT24648AA', s: 'Mucosa bucal Â· NGS', d: 1.0 },
-    { l: 'MÃDICO RESPONSABLE', v: 'Dr. Eulogio M. Vera Vivas', s: 'Director MÃ©dico â Gen Be Health', d: 1.25 },
-    { l: 'FECHA INFORME', v: '23 Â· 04 Â· 2026', d: 1.5 },
+    { l: 'EDAD · GÉNERO', v: '39 años · Hombre', d: 0.75 },
+    { l: 'CÓDIGO · MUESTRA', v: 'NUT24648AA', s: 'Mucosa bucal · NGS', d: 1.0 },
+    { l: 'MÉDICO RESPONSABLE', v: 'Dr. Eulogio M. Vera Vivas', s: 'Director Médico — Gen Be Health', d: 1.25 },
+    { l: 'FECHA INFORME', v: '23 · 04 · 2026', d: 1.5 },
   ];
 
   return (
@@ -101,7 +101,7 @@ function ScenePatient() {
 
             <div style={{ position: 'absolute', left: 120, top: 110, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              IdentificaciÃ³n Â· 01
+              Identificación · 01
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 160, opacity: headerOp, transform: `translateY(${headerTy}px)`,
@@ -113,8 +113,8 @@ function ScenePatient() {
             <div style={{ position: 'absolute', left: 120, top: 380, width: 720,
               opacity: clamp((lt-0.4)/0.6, 0, 1),
               fontSize: 26, color: INK_500, lineHeight: 1.5 }}>
-              Hemos traducido tu ADN en una <strong style={{color: BLUE_900}}>hoja de ruta clÃ­nica</strong>:
-              fisiopatologÃ­a, decisiones y riesgos a 5 aÃ±os.
+              Hemos traducido tu ADN en una <strong style={{color: BLUE_900}}>hoja de ruta clínica</strong>:
+              fisiopatología, decisiones y riesgos a 5 años.
             </div>
 
             <div style={{ position: 'absolute', right: 120, top: 240, width: 600, display: 'flex', flexDirection: 'column', gap: 26 }}>
@@ -137,15 +137,15 @@ function ScenePatient() {
   );
 }
 
-// ============ SCENE 3: DIAGNÃSTICO CENTRAL 9.5-17s ============
-// "El nÃºcleo de tu informe": 6 hallazgos clave del informe final
+// ============ SCENE 3: DIAGNÓSTICO CENTRAL 9.5-17s ============
+// "El núcleo de tu informe": 6 hallazgos clave del informe final
 function SceneDiagnosis() {
   const findings = [
-    { n: '01', t: 'Vulnerabilidad metabÃ³lica\nalta a carbohidratos', tag: 'TCF7L2', tone: 'crit' },
-    { n: '02', t: 'Baja eficiencia en\nmetabolismo de grasas', tag: 'PPARD Â· FADS1', tone: 'crit' },
-    { n: '03', t: 'Eje hambreâsaciedad\ncomprometido', tag: 'LEP Â· LEPR', tone: 'warn' },
-    { n: '04', t: 'Insulinorresistencia\nmedia-alta', tag: 'IRS1 Â· PPARG', tone: 'crit' },
-    { n: '05', t: 'Riesgo cardiovascular\nelevado', tag: 'APOA5 Â· LDLR', tone: 'warn' },
+    { n: '01', t: 'Vulnerabilidad metabólica\nalta a carbohidratos', tag: 'TCF7L2', tone: 'crit' },
+    { n: '02', t: 'Baja eficiencia en\nmetabolismo de grasas', tag: 'PPARD · FADS1', tone: 'crit' },
+    { n: '03', t: 'Eje hambre–saciedad\ncomprometido', tag: 'LEP · LEPR', tone: 'warn' },
+    { n: '04', t: 'Insulinorresistencia\nmedia-alta', tag: 'IRS1 · PPARG', tone: 'crit' },
+    { n: '05', t: 'Riesgo cardiovascular\nelevado', tag: 'APOA5 · LDLR', tone: 'warn' },
     { n: '06', t: 'Alta respuesta\nal ejercicio', tag: 'PPARGC1A', tone: 'pos' },
   ];
   const toneColor = { crit: '#c8364a', warn: '#c98a14', pos: '#1a8f6b' };
@@ -164,7 +164,7 @@ function SceneDiagnosis() {
 
             <div style={{ position: 'absolute', left: 120, top: 90, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              Tu diagnÃ³stico Â· 02
+              Tu diagnóstico · 02
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 135, opacity: headerOp, transform: `translateY(${headerTy}px)`,
