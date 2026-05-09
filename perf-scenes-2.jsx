@@ -1,4 +1,4 @@
-// PERFORMANCE â Scenes 4-5: VO2 alarm, OPRM1 finding
+// PERFORMANCE — Scenes 4-5: VO2 alarm, OPRM1 finding
 
 // SCENE 4: VO2 MAX ALERT 18-26s
 // Major finding: VO2 max improvement only 19.6%
@@ -22,12 +22,12 @@ function PerfSceneVO2() {
 
             <div style={{ position: 'absolute', left: 120, top: 100, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: '#ff8a9c' }}>
-              Hallazgo crÃ­tico Â· 03
+              Hallazgo crítico · 03
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 150, opacity: headerOp, transform: `translateY(${headerTy}px)`,
               fontFamily: 'Helvetica Neue, Inter', fontWeight: 900, fontSize: 76, color: WHITE, letterSpacing: '-0.025em', lineHeight: 1 }}>
-              Tu VOâ mÃ¡x<br/>
+              Tu VO₂ máx<br/>
               <span style={{ color: '#ff8a9c' }}>tiene un techo bajo.</span>
             </div>
 
@@ -46,10 +46,10 @@ function PerfSceneVO2() {
             <div style={{ position: 'absolute', left: 120, top: 460, width: 720, opacity: clamp((lt-1.2)/0.6, 0, 1),
               fontSize: 22, color: 'rgba(255,255,255,0.85)', lineHeight: 1.55 }}>
               <div style={{ fontSize: 26, fontWeight: 700, color: WHITE, marginBottom: 14 }}>
-                Â¿QuÃ© significa?
+                ¿Qué significa?
               </div>
-              Aunque entrenes resistencia, tu mejora serÃ¡ <strong style={{ color: '#ff8a9c' }}>mÃ¡s lenta y limitada</strong> que en la media.
-              Tu cuerpo se adapta â pero no rÃ¡pido.
+              Aunque entrenes resistencia, tu mejora será <strong style={{ color: '#ff8a9c' }}>más lenta y limitada</strong> que en la media.
+              Tu cuerpo se adapta — pero no rápido.
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 660, opacity: clamp((lt-1.6)/0.6, 0, 1), display: 'flex', gap: 12, flexWrap: 'wrap', maxWidth: 760 }}>
@@ -73,7 +73,7 @@ function PerfSceneVO2() {
               </div>
               <div style={{ fontSize: 26, fontWeight: 700, color: WHITE, lineHeight: 1.25, letterSpacing: '-0.01em' }}>
                 Constancia &gt; intensidad.<br/>
-                <span style={{ color: '#d8a4dd' }}>ProgresiÃ³n paciente, sin frustrarse.</span>
+                <span style={{ color: '#d8a4dd' }}>Progresión paciente, sin frustrarse.</span>
               </div>
             </div>
           </div>
@@ -83,8 +83,8 @@ function PerfSceneVO2() {
   );
 }
 
-// SCENE 5: OPRM1 â PercepciÃ³n de esfuerzo 26-32s
-// "Tu cerebro siente el ejercicio mÃ¡s duro de lo que es"
+// SCENE 5: OPRM1 — Percepción de esfuerzo 26-32s
+// "Tu cerebro siente el ejercicio más duro de lo que es"
 function PerfSceneOPRM1() {
   return (
     <Sprite start={26} end={32}>
@@ -103,7 +103,7 @@ function PerfSceneOPRM1() {
 
             <div style={{ position: 'absolute', left: 120, top: 90, opacity: headerOp,
               fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700, color: PURPLE_700 }}>
-              Insight clave Â· 04
+              Insight clave · 04
             </div>
 
             <div style={{ position: 'absolute', left: 120, top: 135, opacity: headerOp,
@@ -139,8 +139,8 @@ function PerfSceneOPRM1() {
 
             <div style={{ position: 'absolute', left: 120, top: 720, width: 900, opacity: clamp((lt-2.6)/0.5, 0, 1),
               fontSize: 26, color: INK_500, lineHeight: 1.5, fontStyle: 'italic' }}>
-              Â«No es falta de capacidad, es <strong style={{ color: BLUE_900, fontStyle: 'normal' }}>percepciÃ³n del dolor</strong>.<br/>
-              Por eso entrenar te cuesta mÃ¡s â pero responder, sÃ­ responde.Â»
+              «No es falta de capacidad, es <strong style={{ color: BLUE_900, fontStyle: 'normal' }}>percepción del dolor</strong>.<br/>
+              Por eso entrenar te cuesta más — pero responder, sí responde.»
             </div>
 
             {/* Right brain callout */}
@@ -150,13 +150,13 @@ function PerfSceneOPRM1() {
               transform: `scale(${pulse})`, transformOrigin: 'center',
               boxShadow: '0 24px 60px rgba(138,45,146,0.35)' }}>
               <div style={{ fontSize: 13, letterSpacing: '0.18em', fontWeight: 700, color: '#d8a4dd', textTransform: 'uppercase', marginBottom: 10 }}>
-                DecisiÃ³n clÃ­nica
+                Decisión clínica
               </div>
               <div style={{ fontSize: 28, fontWeight: 900, lineHeight: 1.2, letterSpacing: '-0.01em' }}>
-                EducaciÃ³n + progresiÃ³n gradual.
+                Educación + progresión gradual.
               </div>
               <div style={{ marginTop: 14, fontSize: 17, color: 'rgba(255,255,255,0.85)', lineHeight: 1.5 }}>
-                Reducir la sensaciÃ³n de esfuerzo previene el abandono â el principal riesgo a 5 aÃ±os.
+                Reducir la sensación de esfuerzo previene el abandono — el principal riesgo a 5 años.
               </div>
             </div>
           </div>
