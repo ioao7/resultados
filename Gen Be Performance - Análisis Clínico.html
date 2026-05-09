@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Gen Be Performance - Análisis Clínico Deportivo</title>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<style>
+  html, body, #root { margin: 0; padding: 0; height: 100%; background: #0a0a0a; overflow: hidden; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="animations.jsx"></script>
+<script type="text/babel" src="v2-scenes-1.jsx"></script>
+<script type="text/babel" src="perf-scenes-1.jsx"></script>
+<script type="text/babel" src="perf-scenes-2.jsx"></script>
+<script type="text/babel" src="perf-scenes-3.jsx"></script>
+<script type="text/babel">
+function App() {
+  return (
+    <div data-video-root data-screen-label="Gen Be Performance" style={{ position: 'absolute', inset: 0 }}>
+      <Stage width={1920} height={1080} duration={56} background="#ffffff" persistKey="gbh-performance-v1">
+        <PerfSceneIntro/>
+        <PerfScenePatient/>
+        <PerfSceneProfile/>
+        <PerfSceneVO2/>
+        <PerfSceneOPRM1/>
+        <PerfSceneStrengthsLimits/>
+        <PerfScenePlan/>
+        <PerfSceneClosing/>
+      </Stage>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
